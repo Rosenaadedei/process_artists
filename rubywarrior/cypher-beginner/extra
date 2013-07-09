@@ -1,0 +1,97 @@
+walk   
+
+	def time_to _walk 
+	    space? && (!need_rest? || being attacked?)
+attack	
+	def time_to_attack
+		(!space? || space?) &&  
+health
+	space
+rest
+feel
+	you want to feel 
+
+
+
+
+
+	6 ways
+Define all methods
+
+
+
+
+should you feel or not
+	1. u should always feel
+
+should you rest or not
+	2. 
+
+are you being attacked or not
+	3.
+
+should you attack or not
+	4.
+
+is there a space or not
+	5.
+
+should you walk forward or not 
+	6.
+
+    @warrior = warrior
+    
+if should_feel?
+	@warrior.health.empty?
+elsif should_rest?
+	@warrior.rest!
+you being attacked or not
+	3.
+
+should you attack or not
+	4.
+
+is there a space or not
+	5.
+
+should you walk forward or not 
+	6.
+
+
+
+
+
+
+
+
+    # add your code here
+    rescue_behind || rescue_forward ||
+        if should_rest?
+        	@warrior.rest!
+        elsif should_walk?
+              @warrior.walk!
+        elsif should_attack?
+        	@warrior.attack!
+    end
+  end
+  def space?
+  	@warrior.feel.empty?
+  end
+  def should_rest?
+  		space? && !being_attacked
+  	end
+  def should_walk?
+  	space?
+  end
+  def should_attack?
+  	being_attacked?
+  end
+  def being_attacked?
+  	@being_attacked
+
+  	if @warrior.health < @old_health_hps.to_i
+  		@being_attacked = true
+  	else 
+  		@being_attacked = false
+  	end
+  	return @being_attacked
